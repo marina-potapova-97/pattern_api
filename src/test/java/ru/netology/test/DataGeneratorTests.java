@@ -16,7 +16,7 @@ public class DataGeneratorTests {
     @BeforeEach
     void setup() {
         open("http://localhost:9999");
-        Configuration.headless = true;
+
     }
 
     @Test
