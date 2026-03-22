@@ -15,7 +15,6 @@ import static java.time.Duration.ofSeconds;
 public class DataGeneratorTests {
     @BeforeEach
     void setup() {
-        Configuration.headless = true;
         open("http://localhost:9999");
 
     }
