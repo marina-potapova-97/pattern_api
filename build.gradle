@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+
+}
+
+group = 'ru.netology'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation 'io.rest-assured:rest-assured:5.3.1' // Попробуйте 5.3.1
+    testImplementation 'io.rest-assured:json-schema-validator:5.3.1'
+    testImplementation 'io.rest-assured:rest-assured-common:5.3.1'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation 'org.projectlombok:lombok:1.18.28'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
+    testImplementation 'com.codeborne:selenide:6.18.0'
+
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+    // свойство chromeoptions.prefs используется для задания настроек браузера в проектах на основе Selenide, выключаем менеджер паролей
+    systemProperty 'chromeoptions.prefs', System.getProperty('chromeoptions.prefs', "profile.password_manager_leak_detection=false")
+}

@@ -1,0 +1,1 @@
+[![Build Status](https://github.com/marina-potapova-97/pattern_api/actions/workflows/gradle.yml/badge.svg)](https://github.com/marina-potapova-97/pattern_api/actions/workflows/gradle.yml)
